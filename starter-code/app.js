@@ -163,6 +163,7 @@ console.log(joe);
 
 
 
+// Student.prototype.greeting = () => `Hi, my name is ${this.name}`;
 Student.prototype.greeting = function() {
   return `Hi, my name is ${this.name}`;
 };
@@ -191,17 +192,20 @@ Student.prototype.scope = function() {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// joe.scope();
+joe.scope();
 
 Student.prototype.scopeArrow = () => console.log(this);
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// joe.scopeArrow();
+joe.scopeArrow();
 
 // TODO: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
-//
+// this refers to the joe student object
 // 2. What is "this" when joe.scopeArrow() is invoked?
-//
+//calling browser window object
 // 3. Explain why "this" is different when an arrow function is used.
-//
+//this isnt defined by an arrow function. This retains the value defined within the scope of where the arrow function was defined
+
+
+// TO DO FOR TONIGHT: refactor arrow functions
